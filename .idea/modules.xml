@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/prekes-web.iml" filepath="$PROJECT_DIR$/prekes-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gydytojai-web.iml" filepath="$PROJECT_DIR$/gydytojai-web.iml" />
     </modules>
   </component>
 </project>
