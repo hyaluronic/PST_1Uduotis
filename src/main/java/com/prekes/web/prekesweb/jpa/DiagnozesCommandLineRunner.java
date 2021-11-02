@@ -20,11 +20,26 @@ public class DiagnozesCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("~~~~~~ DiagnozesCommandLineRunner ~~~~~~");
-        repository.save(new Diagnozes(1, 6, "Liga1", "01.01"));
-        repository.save(new Diagnozes(2, 7, "Liga2", "01.02"));
-        repository.save(new Diagnozes(3, 8, "Liga1", "01.03"));
-        repository.save(new Diagnozes(4, 6, "Liga4", "01.04"));
-        repository.save(new Diagnozes(1, 7, "Liga5", "01.05"));
+        repository.save(new Diagnozes(1, 24, "Liga1", "01.01"));
+        repository.save(new Diagnozes(2, 21, "Liga2", "01.02"));
+        repository.save(new Diagnozes(3, 21, "Liga3", "01.03"));
+        repository.save(new Diagnozes(1, 23, "Liga4", "01.04"));
+        repository.save(new Diagnozes(4, 23, "Liga1", "01.04"));
+        repository.save(new Diagnozes(3, 21, "Liga2", "01.03"));
+        repository.save(new Diagnozes(2, 22, "Liga3", "01.04"));
+        repository.save(new Diagnozes(4, 22, "Liga4", "01.03"));
+        repository.save(new Diagnozes(5, 34, "Liga5", "01.04"));
+        repository.save(new Diagnozes(1, 27, "Liga5", "01.05"));
+        repository.save(new Diagnozes(1, 26, "Liga1", "01.02"));
+        repository.save(new Diagnozes(2, 27, "Liga2", "01.02"));
+        repository.save(new Diagnozes(3, 28, "Liga1", "03.03"));
+        repository.save(new Diagnozes(2, 26, "Liga4", "02.04"));
+        repository.save(new Diagnozes(1, 27, "Liga5", "02.05"));
+        repository.save(new Diagnozes(1, 26, "Liga1", "03.02"));
+        repository.save(new Diagnozes(5, 27, "Liga3", "03.02"));
+        repository.save(new Diagnozes(3, 28, "Liga2", "02.03"));
+        repository.save(new Diagnozes(1, 26, "Liga4", "01.04"));
+        repository.save(new Diagnozes(1, 27, "Liga1", "01.05"));
 
         for (Diagnozes o : repository.findAll()) {
             log.info(o.toString());

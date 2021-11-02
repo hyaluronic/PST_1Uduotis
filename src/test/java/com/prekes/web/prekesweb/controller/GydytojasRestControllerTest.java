@@ -44,7 +44,7 @@ class GydytojasRestControllerTest {
         gydytojas.add(new Gydytojas("BBB", "111"));
         when(gydytojasService.findAll()).thenReturn(gydytojas);
         RequestBuilder rb = MockMvcRequestBuilders
-                .get("/gydytojai")
+                .get("/gydytojai-json")
                 .accept(MediaType.APPLICATION_JSON);
         MvcResult result = mockMvc.perform(rb)
                 .andExpect(MockMvcResultMatchers.status().isOk())

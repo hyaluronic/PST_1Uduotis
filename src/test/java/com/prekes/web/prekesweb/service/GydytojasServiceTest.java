@@ -36,7 +36,7 @@ class GydytojasServiceTest {
     DiagnozesRepository diagnozesRepository;
     @InjectMocks
     GydytojasService service;
-    @InjectMocks
+    @Mock
     DiagnozesService diagnozesService;
 
     @DisplayName("Test Find All")
@@ -51,17 +51,13 @@ class GydytojasServiceTest {
         assertEquals(1, found.size());
     }
 
-    @Ignore("issiaiskint ko neveikia")
     @Test
     void testFindDiagnozesByGydytojoId() {
         List<Diagnozes> diagnozes = new ArrayList<>();
         diagnozes.add(new Diagnozes(PACIENTO_ID, GYDYTOJO_ID, DIAGNOZE, DATA));
-//		when(diagnozesRepository.findByGydytojoId(Mockito.anyInt())).thenReturn(diagnozes);
-//		when(diagnozesService.findByGydytojoId(Mockito.anyInt())).thenReturn(diagnozes);
-//		when(service.findDiagnozesByGydytojoId(Mockito.anyInt())).thenReturn(diagnozes);
+		when(diagnozesService.findByGydytojoId(Mockito.anyInt())).thenReturn(diagnozes);
         List<Diagnozes> found = service.findDiagnozesByGydytojoId(GYDYTOJO_ID);
-        verify(repository).findAll();
-//		verify(diagnozesRepository).findByGydytojoId(Mockito.anyInt());
+		verify(diagnozesService).findByGydytojoId(Mockito.anyInt());
         assertNotNull(found);
     }
 
